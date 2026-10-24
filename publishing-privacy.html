@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="How Moonbeam YouTube Publishing accesses, uses, stores and shares Google account data for the owner's YouTube publishing workflow.">
+  <title>Moonbeam YouTube Publishing · Privacy notice</title>
+  <link rel="stylesheet" href="youtube.css">
+</head>
+<body>
+<main>
+  <header><a href="index.html">Moonbeam YouTube Publishing</a><a href="index.html">Application information</a></header>
+  <p class="eyebrow">LAST UPDATED OCTOBER 23, 2026</p>
+  <h1>Publishing privacy.</h1>
+  <p class="intro">This notice covers the local Moonbeam YouTube Publishing integration used by the owner of the Moonbeam YouTube channel. It does not cover separate story-generation services or Google's own handling of YouTube data.</p>
+
+  <section aria-labelledby="access">
+    <h2 id="access">Data accessed and its purpose</h2>
+    <p>When the channel owner authorizes Google access, Moonbeam receives an access token and an offline refresh token. It reads the connected channel's ID and name to check the upload destination. It also reads relevant playlist and playlist-item information to organize uploaded stories without creating duplicates.</p>
+    <p>The integration uses the YouTube upload, read-only and management permissions for these features. It does not receive the owner's Google password. This workflow does not request Gmail, contacts, calendar or Google Drive access.</p>
+    <p>Google account data is used to maintain the connection, upload stories, check the selected channel, organize playlists and recover interrupted work. The publishing integration does not sell this data, use it for advertising, or send it to story-generation models.</p>
+  </section>
+
+  <section aria-labelledby="sharing">
+    <h2 id="sharing">What is sent to YouTube</h2>
+    <p>Moonbeam sends rendered story videos, titles, descriptions, keywords, language/category settings, visibility settings and the made-for-kids declaration to Google/YouTube. It also sends playlist titles, descriptions and video membership changes.</p>
+    <p>Videos contain the story illustrations and narration, including any personal details already present in that content. Descriptions can contain the story synopsis. Original story requests and microphone recordings are not included by this publishing integration.</p>
+    <p>Public videos and public playlist information can be seen by anyone. Private videos follow the owner's selected YouTube visibility setting. Google processes uploaded content under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://www.youtube.com/t/terms">YouTube's Terms of Service</a>.</p>
+  </section>
+
+  <section aria-labelledby="storage">
+    <h2 id="storage">Local storage and retention</h2>
+    <p>In this local setup, the OAuth client configuration and refresh credential are stored on the computer running Moonbeam. Upload-session references, the channel ID and name, story/video IDs, playlist IDs, publishing settings and progress records are stored there too. Rendered video exports remain on that computer after upload unless removed.</p>
+    <p>Records are retained to show progress and prevent duplicate publishing; there is no automatic retention deadline. The owner controls this computer and its backups. The integration keeps the same rendered file while an upload session is unfinished so that it can resume safely.</p>
+    <p>Connecting an account uses a short-lived browser cookie and temporary server state to validate the OAuth return. These information pages contain no analytics scripts or sign-in forms.</p>
+  </section>
+
+  <section aria-labelledby="control">
+    <h2 id="control">Pause, disconnect and removal</h2>
+    <p>The owner can pause automatic publishing in Moonbeam's YouTube publishing settings. An upload already in progress may finish. Disconnecting pauses publishing and removes the locally stored refresh credential after active work has finished.</p>
+    <p><strong>Disconnecting locally does not revoke Google's authorization.</strong> To revoke access at Google, use the <a href="https://myaccount.google.com/connections">Google Account third-party connections settings</a> and remove this application's connection.</p>
+    <p>Deleting a story in Moonbeam removes its local export and cancels pending publishing. Minimal upload identifiers may remain to prevent duplicate work. Disconnecting does not erase story files, exported videos or publishing history. The operator can remove remaining local records and backup copies separately.</p>
+    <p>Local deletion, pausing and disconnection do not delete videos or playlists already stored on YouTube. The channel owner can manage or delete them in YouTube Studio.</p>
+  </section>
+
+  <section aria-labelledby="scope">
+    <h2 id="scope">Children's content and contact</h2>
+    <p>The published stories are intended for children and are marked as made for kids. The publishing controls and Google connection are operated by the channel owner; child viewers do not sign into this publishing tool.</p>
+    <p>For questions about this integration or its retained records, contact the operator using the support email displayed on the application's Google authorization screen. This notice will be updated before material changes to the publishing integration's use of Google account data.</p>
+  </section>
+
+  <footer><a href="index.html">About Moonbeam YouTube Publishing</a> · <a href="https://www.youtube.com/channel/UCMTDjO0GxlCWCUD1XBIoxtQ">Moonbeam channel</a></footer>
+</main>
+</body>
+</html>
